@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>InstaFace - Login</title>
+	<link rel="stylesheet" href="../src/css/login.css">
+	<script src="../src/js/main.js" defer></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<div class="nav-brand">
+			<a href="../index.html">
+				<img src="../assets/img/InstaFace_logo.png" alt="InstaFace Logo">
+				<span>InstaFace</span>
+			</a>
+		</div>
+		<ul class="nav-center">
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html">Privacy Settings</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li><a href="login.html" class="nav-btn">Login</a></li>
+			<li><a href="sign_up.html" class="nav-btn nav-btn-primary">Sign Up</a></li>
+		</ul>
+	</header>
+
+	<!-- Main content -->
+	<main>
+		<div class="box auth-box">
+			<div class="auth-header">
+				<h2>Login</h2>
+			</div>
+
+			<!-- Alert box -->
+			<div id="login-alert" class="form-alert"></div>
+
+			<!-- Login form -->
+			<form id="login-form" class="auth-form" onsubmit="handleLogin(event)">
+				<div class="form-group">
+					<label for="login-email">Email or Username</label>
+					<input type="text" id="login-email" placeholder="e.g. mandamian.rogelio@ustp.edu.ph" required>
+				</div>
+
+				<div class="form-group">
+					<label for="login-password">Password</label>
+					<input type="password" id="login-password" placeholder="Enter password" required>
+				</div>
+
+				<div class="form-options">
+					<label class="checkbox-label">
+						<input type="checkbox" id="remember-me" checked>
+						<span>Remember session</span>
+					</label>
+					<a href="#" style="color: #8e8e8e; font-size: 12px;" onclick="alert('Client-side prototype: You can clear or reset data in the Privacy Settings page.'); return false;">Forgot password?</a>
+				</div>
+
+				<button type="submit" class="btn-submit">Log In</button>
+
+				<!-- Quick demo button -->
+				<button type="button" class="btn-block" style="margin-top: 8px; font-size: 13px;" onclick="fillDemoUser()">
+					Fill Demo User (Rogelio Q. Mandamian III)
+				</button>
+			</form>
+
+			<div class="auth-footer">
+				<span>Don't have an account?</span>
+				<a href="sign_up.html">Sign Up</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-text">
+			InstaFace Prototype &bull; Rogelio Q. Mandamian III (BSDS-3A, USTP)
+		</div>
+		<ul>
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html">Privacy</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="sign_up.html">Sign Up</a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>

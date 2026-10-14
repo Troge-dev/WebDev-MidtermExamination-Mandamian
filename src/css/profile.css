@@ -1,0 +1,65 @@
+/* Profile page styles */
+@import url("style.css");
+
+main {
+	display: flex;
+	gap: 20px;
+}
+
+#profile-sidebar {
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+#profile-main {
+	width: 68%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.info-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+.info-item {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #efefef;
+	font-size: 13px;
+}
+
+.info-item:last-child {
+	border-bottom: none;
+}
+
+.info-item span:first-child {
+	color: #8e8e8e;
+}
+
+.info-item span:last-child {
+	color: #262626;
+	font-weight: 600;
+}
+
+.posts-container {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+@media (max-width: 850px) {
+	main {
+		flex-direction: column;
+	}
+	#profile-sidebar,
+	#profile-main {
+		width: 100%;
+	}
+}

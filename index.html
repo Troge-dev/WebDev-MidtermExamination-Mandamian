@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>InstaFace - Main Feed</title>
+	<link rel="stylesheet" href="src/css/style.css">
+	<script src="src/js/main.js" defer></script>
+</head>
+
+<body>
+	<!-- Header and Navigation -->
+	<header>
+		<div class="nav-brand">
+			<a href="index.html">
+				<img src="assets/img/InstaFace_logo.png" alt="InstaFace Logo">
+				<span>InstaFace</span>
+			</a>
+		</div>
+		<ul class="nav-center">
+			<li><a href="index.html" class="active">Feed</a></li>
+			<li><a href="pages/profile.html">Profile</a></li>
+			<li><a href="pages/about_us.html">About Us</a></li>
+			<li><a href="pages/privacy_settings.html">Privacy Settings</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li><a href="pages/login.html" class="nav-btn">Login</a></li>
+			<li><a href="pages/sign_up.html" class="nav-btn nav-btn-primary">Sign Up</a></li>
+		</ul>
+	</header>
+
+	<!-- Main layout -->
+	<main>
+		<!-- Left column -->
+		<div id="information_left">
+			<div class="box profile-box">
+				<div class="avatar-placeholder">
+					<img src="assets/img/pfp_kuno.jpg" alt="Rogelio Q. Mandamian III">
+				</div>
+				<h3>Rogelio Q. Mandamian III</h3>
+				<p style="color: #8e8e8e; font-size: 13px;">@troge_dev</p>
+				<span class="badge">BSDS-3A &bull; USTP</span>
+				<p style="font-size: 13px; margin-top: 8px;">
+					Data Science student. “I think, therefore I am.” Privacy-focused prototype without AI data
+					harvesting.
+				</p>
+			</div>
+
+			<div class="box">
+				<h4>Privacy Principles</h4>
+				<ul style="padding-left: 18px; font-size: 13px; line-height: 1.6; margin-top: 6px;">
+					<li>Zero AI training scraping</li>
+					<li>No third-party tracking cookies</li>
+					<li>No cloud database leakage</li>
+					<li>100% Client-side local storage</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Center column -->
+		<div id="main-container">
+			<div class="box banner-box">
+				<h4>Welcome to InstaFace</h4>
+				<p style="font-size: 13px; color: #555555;">
+					A combination of Facebook and Instagram built with privacy in mind. Share thoughts and photos
+					without AI surveillance.
+				</p>
+			</div>
+
+			<!-- Create post box -->
+			<div class="box create-post-box">
+				<div class="box-header">
+					<div class="avatar-small">
+						<img src="assets/img/pfp_kuno.jpg" alt="Rogelio Q. Mandamian III">
+					</div>
+					<div>
+						<h4>Create a Post</h4>
+						<small style="color: #8e8e8e;">Share an authentic human thought</small>
+					</div>
+				</div>
+				<textarea id="post-input"
+					placeholder="“I think, therefore I am.” What is on your mind today?"></textarea>
+				<div class="box-footer">
+					<select id="post-category">
+						<option value="Philosophy">Philosophy</option>
+						<option value="Privacy">Privacy</option>
+						<option value="Technology">Technology</option>
+						<option value="General">General</option>
+					</select>
+					<label class="checkbox-label">
+						<input type="checkbox" id="scrape-shield-check" checked>
+						<span>Anti-AI Shield</span>
+					</label>
+					<button id="post-btn" onclick="createPost()">Post</button>
+				</div>
+			</div>
+
+			<!-- Feed category tabs -->
+			<div class="tabs-container">
+				<button class="tab active">All</button>
+				<button class="tab">Philosophy</button>
+				<button class="tab">Privacy</button>
+				<button class="tab">Technology</button>
+			</div>
+
+			<!-- Feed posts container -->
+			<div id="feed-container">
+				<div class="box post-box">
+					<div class="box-header">
+						<div class="avatar-small">
+							<img src="assets/img/pfp_kuno.jpg" alt="Rogelio Q. Mandamian III">
+						</div>
+						<div style="flex: 1;">
+							<strong>Rogelio Q. Mandamian III</strong>
+							<small style="color: #8e8e8e;">@troge_dev &bull; 10 mins ago</small>
+						</div>
+						<span class="badge">#Philosophy</span>
+					</div>
+					<p style="font-size: 14px; margin-bottom: 6px;">
+						“I think, therefore I am.” — René Descartes. If thinking is what affirms our existence, we
+						should not surrender our minds to AI. InstaFace keeps all data in your local browser.
+					</p>
+					<div class="post-image">
+						<img src="assets/img/thinking_cat_placeholder.jpg" alt="Thinking Cat">
+					</div>
+					<div class="post-actions">
+						<button class="like-btn" onclick="likePost(this)">Like (12)</button>
+						<span style="font-size: 12px; color: #8e8e8e;">Anti-AI Protected</span>
+					</div>
+				</div>
+
+				<div class="box post-box">
+					<div class="box-header">
+						<div class="avatar-small">
+							<img src="assets/img/rene_pfp.jpg" alt="René Butterbonia">
+						</div>
+						<div style="flex: 1;">
+							<strong>René Butterbonia</strong>
+							<small style="color: #8e8e8e;">@Butterbonia &bull; 1 hour ago</small>
+						</div>
+						<span class="badge">#Philosophy</span>
+					</div>
+					<p style="font-size: 14px; margin-bottom: 6px;">MAMAAAAAA!!!!</p>
+					<div class="post-actions">
+						<button class="like-btn" onclick="likePost(this)">Like (34)</button>
+						<span style="font-size: 12px; color: #8e8e8e;">Anti-AI Protected</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right column -->
+		<div id="information_right">
+			<div class="box">
+				<div class="post-image">
+					<img src="assets/img/kendrick_line.jpg" alt="Kendrick Lamar - Swimming Pools Verse">
+				</div>
+			</div>
+
+			<div class="box">
+				<h4>Privacy Diagnostics</h4>
+				<div class="stat-row">
+					<span>AI Scrapers Blocked:</span>
+					<strong>9,482</strong>
+				</div>
+				<div class="stat-row">
+					<span>Cloud Cookies Stored:</span>
+					<strong>0</strong>
+				</div>
+				<div class="stat-row">
+					<span>Tracking Beacons:</span>
+					<strong>0%</strong>
+				</div>
+				<div class="stat-row">
+					<span>Platform Mode:</span>
+					<strong>100% Client-Side</strong>
+				</div>
+			</div>
+
+			<div class="box" style="text-align: center;">
+				<h4>Human Integrity Check</h4>
+				<p style="font-size: 12px; color: #8e8e8e; margin: 6px 0 10px 0;">
+					Authentic human 80s music verification link.
+				</p>
+				<a href="https://youtu.be/dQw4w9WgXcQ?si=2tz7kvTO5_ub_IbX" target="_blank" rel="noopener noreferrer">
+					<button class="btn-block">Never Gonna Give Up Privacy</button>
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-text">
+			InstaFace Prototype &bull; Rogelio Q. Mandamian III (BSDS-3A, USTP)
+		</div>
+		<ul>
+			<li><a href="index.html">Feed</a></li>
+			<li><a href="pages/profile.html">Profile</a></li>
+			<li><a href="pages/about_us.html">About Us</a></li>
+			<li><a href="pages/privacy_settings.html">Privacy</a></li>
+			<li><a href="pages/login.html">Login</a></li>
+			<li><a href="pages/sign_up.html">Sign Up</a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>

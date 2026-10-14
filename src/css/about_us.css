@@ -1,0 +1,29 @@
+/* About us page styles */
+@import url("style.css");
+
+main {
+	flex-direction: column;
+	gap: 20px;
+	max-width: 950px;
+}
+
+.features-row {
+	display: flex;
+	gap: 16px;
+}
+
+.feature-box {
+	flex: 1;
+}
+
+.feature-box h3,
+.feature-box h4 {
+	color: #262626;
+	margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+	.features-row {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>InstaFace - Privacy Settings</title>
+	<link rel="stylesheet" href="../src/css/privacy_settings.css">
+	<script src="../src/js/main.js" defer></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<div class="nav-brand">
+			<a href="../index.html">
+				<img src="../assets/img/InstaFace_logo.png" alt="InstaFace Logo">
+				<span>InstaFace</span>
+			</a>
+		</div>
+		<ul class="nav-center">
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html" class="active">Privacy Settings</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li><a href="login.html" class="nav-btn">Login</a></li>
+			<li><a href="sign_up.html" class="nav-btn nav-btn-primary">Sign Up</a></li>
+		</ul>
+	</header>
+
+	<!-- Main layout -->
+	<main>
+		<!-- Settings navigation -->
+		<div id="settings-nav">
+			<div class="box">
+				<h4>Settings</h4>
+				<div class="nav-list">
+					<div class="nav-item active">Privacy Controls</div>
+					<div class="nav-item">Account Security</div>
+					<div class="nav-item">Data Permissions</div>
+					<div class="nav-item">Connected Sessions</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<h4>Privacy Summary</h4>
+				<p style="font-size: 13px; color: #555555; line-height: 1.5; margin-top: 6px;">
+					Your profile is protected by client-side browser sandbox storage. No personal data is sent to external servers.
+				</p>
+			</div>
+		</div>
+
+		<!-- Settings content -->
+		<div id="settings-content">
+			<div class="box">
+				<h3>Privacy &amp; Data Preferences</h3>
+				<p style="font-size: 13px; color: #8e8e8e; margin: 4px 0 14px 0;">
+					Manage your local privacy preferences on InstaFace:
+				</p>
+
+				<div class="setting-row">
+					<div class="setting-desc">
+						<strong>Anti-AI Scraping Shield</strong>
+						<small>Block web bots from crawling your posts for AI model training.</small>
+					</div>
+					<div>
+						<input type="checkbox" id="check-anti-ai" checked>
+					</div>
+				</div>
+
+				<div class="setting-row">
+					<div class="setting-desc">
+						<strong>Ephemeral Browsing Mode</strong>
+						<small>Do not log post timestamps or session details in local storage.</small>
+					</div>
+					<div>
+						<input type="checkbox" id="check-ephemeral">
+					</div>
+				</div>
+
+				<div class="setting-row">
+					<div class="setting-desc">
+						<strong>Auto-strip Photo Metadata</strong>
+						<small>Remove EXIF location and camera details from uploaded image placeholders.</small>
+					</div>
+					<div>
+						<input type="checkbox" id="check-strip-exif" checked>
+					</div>
+				</div>
+
+				<div class="setting-row">
+					<div class="setting-desc">
+						<strong>Block Tracking Cookies</strong>
+						<small>Reject all third-party tracking beacons.</small>
+					</div>
+					<div>
+						<input type="checkbox" id="check-zero-telemetry" checked disabled>
+					</div>
+				</div>
+
+				<div class="btn-row">
+					<button class="btn" onclick="alert('Settings reset to default.')">Cancel</button>
+					<button class="btn btn-primary" id="save-settings-btn" onclick="saveSettings()">Save Changes</button>
+				</div>
+			</div>
+
+			<div class="box">
+				<h4>Data Management</h4>
+				<p style="font-size: 13px; color: #555555; margin: 6px 0 12px 0; line-height: 1.5;">
+					All thoughts and account information are stored in your browser's localStorage. You can download or purge this data anytime.
+				</p>
+				<div class="btn-row" style="justify-content: flex-start;">
+					<button class="btn" onclick="alert('Data is safely kept in your browser localStorage.')">
+						Export Data (JSON)
+					</button>
+					<button class="btn" id="clear-cache-btn" style="color: #ed4956; border-color: #f7c5c8;" onclick="clearCache()">
+						Clear Local Storage
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-text">
+			InstaFace Prototype &bull; Rogelio Q. Mandamian III (BSDS-3A, USTP)
+		</div>
+		<ul>
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html">Privacy</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="sign_up.html">Sign Up</a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>

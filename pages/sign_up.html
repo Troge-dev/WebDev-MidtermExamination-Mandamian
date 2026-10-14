@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>InstaFace - Sign Up</title>
+	<link rel="stylesheet" href="../src/css/sign_up.css">
+	<script src="../src/js/main.js" defer></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<div class="nav-brand">
+			<a href="../index.html">
+				<img src="../assets/img/InstaFace_logo.png" alt="InstaFace Logo">
+				<span>InstaFace</span>
+			</a>
+		</div>
+		<ul class="nav-center">
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html">Privacy Settings</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li><a href="login.html" class="nav-btn">Login</a></li>
+			<li><a href="sign_up.html" class="nav-btn nav-btn-primary">Sign Up</a></li>
+		</ul>
+	</header>
+
+	<!-- Main content -->
+	<main>
+		<div class="box auth-box">
+			<div class="auth-header">
+				<h2>Create an Account</h2>
+				<p>Sign up to connect and share on InstaFace</p>
+			</div>
+
+			<!-- Alert box -->
+			<div id="signup-alert" class="form-alert"></div>
+
+			<!-- Signup form -->
+			<form id="signup-form" class="auth-form" onsubmit="handleSignup(event)">
+				<!-- First and last name -->
+				<div class="form-row">
+					<div class="form-group">
+						<label for="first-name">First Name</label>
+						<input type="text" id="first-name" placeholder="Rogelio" required>
+					</div>
+					<div class="form-group">
+						<label for="last-name">Last Name</label>
+						<input type="text" id="last-name" placeholder="Mandamian" required>
+					</div>
+				</div>
+
+				<!-- Username -->
+				<div class="form-group">
+					<label for="signup-username">Username</label>
+					<input type="text" id="signup-username" placeholder="troge_dev" required>
+				</div>
+
+				<!-- Email -->
+				<div class="form-group">
+					<label for="signup-email">Email Address</label>
+					<input type="email" id="signup-email" placeholder="mandamian.rogelio@ustp.edu.ph" required>
+				</div>
+
+				<!-- Date of birth (inputs and js.pptx slide 5) -->
+				<div class="form-group">
+					<label for="signup-birthdate">Date of Birth</label>
+					<input type="date" id="signup-birthdate">
+				</div>
+
+				<!-- Gender radio buttons (inputs and js.pptx slide 3) -->
+				<div class="form-group">
+					<label>Gender</label>
+					<div class="radio-group">
+						<label>
+							<input type="radio" name="gender" value="male" checked> Male
+						</label>
+						<label>
+							<input type="radio" name="gender" value="female"> Female
+						</label>
+						<label>
+							<input type="radio" name="gender" value="prefer_not_to_say"> Prefer not to say
+						</label>
+					</div>
+				</div>
+
+				<!-- Privacy tier select (inputs and js.pptx slide 6) -->
+				<div class="form-group">
+					<label for="signup-privacy-tier">Privacy Tier</label>
+					<select id="signup-privacy-tier">
+						<option value="standard">Standard Client Sandbox</option>
+						<option value="high">High Privacy (No Storage Logs)</option>
+						<option value="max">Maximum Privacy (Ephemeral Session)</option>
+					</select>
+				</div>
+
+				<!-- Password fields -->
+				<div class="form-group">
+					<label for="signup-password">Password</label>
+					<input type="password" id="signup-password" placeholder="Create password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="confirm-password">Confirm Password</label>
+					<input type="password" id="confirm-password" placeholder="Confirm password" required>
+				</div>
+
+				<!-- Terms checkbox (inputs and js.pptx slide 4) -->
+				<label class="checkbox-label">
+					<input type="checkbox" id="terms-checkbox" required>
+					<span>I agree to the Terms of Service and Privacy Policy.</span>
+				</label>
+
+				<button type="submit" class="btn-submit">Sign Up</button>
+			</form>
+
+			<div class="auth-footer">
+				<span>Already have an account?</span>
+				<a href="login.html">Log In</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-text">
+			InstaFace Prototype &bull; Rogelio Q. Mandamian III (BSDS-3A, USTP)
+		</div>
+		<ul>
+			<li><a href="../index.html">Feed</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="about_us.html">About Us</a></li>
+			<li><a href="privacy_settings.html">Privacy</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="sign_up.html">Sign Up</a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>
