@@ -1,2 +1,2 @@
-**Rogelio Q. Mandamian III** /
+**Rogelio Q. Mandamian III** <br>
 **BSDS - 3A**
